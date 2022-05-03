@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="container-body">
+        <div class="container-text">
+            <form (submit)="onFormSutmit($event)">
+
+                <dx-form id="form" [colCount]="2" [formData]="formData">
+                    <dxi-item dataField="Address" [label]="{ text: 'Titulo' }" dataField="text"></dxi-item> 
+                    <dxi-item dataField="Address" [label]="{ text: 'Genero' }" dataField="text"></dxi-item>
+                    <dxi-item dataField="Address" [label]="{ text: 'Año' }" dataField="text"></dxi-item>
+                    <dxi-item dataField="Autor" editorType="dxSelectBox"
+                      [editorOptions]="{  searchEnabled: true, value: '' }"
+                    ></dxi-item>
+                    <dxi-item dataField="Editorial" editorType="dxSelectBox"
+                      [editorOptions]="{  searchEnabled: true, value: '' }"
+                    ></dxi-item>
+                    
+                        
+                     <dxi-item itemType="button" [buttonOptions]="{                      
+                                        text: 'Buscar',
+                                        type: 'success',
+                                        hoverStateEnabled:'true',
+                                        alignment: 'right',
+                                        useSubmitBehavior: true}" verticalAlignment="bottom">
+                    </dxi-item>                
+                  </dx-form>
+            </form>
+        </div>
+    </div>
+    <div class="container-grid">
+        <app-data-grid
+        [gridResult]="dataGrid"
+        ></app-data-grid>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div [hidden]="gridResult == null || gridResult.length == 0">
+    <dx-data-grid [dataSource]="gridResult" [hoverStateEnabled]="true" [showBorders]="true" [showRowLines]="true"
+        ophGridHeaderColor ophGridHeaderTextColor>
+        <dxo-paging [pageSize]="8"></dxo-paging>
+        <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[8, 12, 14]"></dxo-pager>
+        <dxi-column caption="Titulo" dataField="title" alignment="center"></dxi-column>
+        <dxi-column caption="Año" dataField="year" alignment="center"></dxi-column>  
+        <dxi-column caption="Genero" dataField="gender" alignment="center"></dxi-column>  
+        <dxi-column caption="Autor" dataField="author" alignment="center"></dxi-column> 
+        <dxi-column caption="Editorial" dataField="publisher" alignment="center"></dxi-column>       
+    </dx-data-grid>
+</div>
